@@ -164,7 +164,7 @@ SetVisualFXPerformance          # SetVisualFXAppearance
 SetAppsDarkMode                 # SetAppsLightMode
 SetSystemDarkMode               # SetSystemDarkMode
 # AddENKeyboard                 # RemoveENKeyboard
-# EnableNumlock                 # DisableNumlock
+EnableNumlock                   # DisableNumlock
 # DisableEnhPointerPrecision    # EnableEnhPointerPrecision
 # SetSoundSchemeNone            # SetSoundSchemeDefault
 # DisableStartupSound           # EnableStartupSound
