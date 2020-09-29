@@ -198,17 +198,17 @@ ShowThisPCOnDesktop             # HideThisPCFromDesktop
 # ShowNetworkOnDesktop          # HideNetworkFromDesktop
 # HideDesktopIcons              # ShowDesktopIcons
 # ShowBuildNumberOnDesktop      # HideBuildNumberFromDesktop
-HideDesktopFromThisPC           # ShowDesktopInThisPC
+ShowDesktopFromThisPC           # ShowDesktopInThisPC
 # HideDesktopFromExplorer       # ShowDesktopInExplorer
-HideDocumentsFromThisPC         # ShowDocumentsInThisPC
+ShowDocumentsFromThisPC         # ShowDocumentsInThisPC
 # HideDocumentsFromExplorer     # ShowDocumentsInExplorer
-HideDownloadsFromThisPC         # ShowDownloadsInThisPC
+ShowDownloadsFromThisPC         # ShowDownloadsInThisPC
 # HideDownloadsFromExplorer     # ShowDownloadsInExplorer
 HideMusicFromThisPC             # ShowMusicInThisPC
 # HideMusicFromExplorer         # ShowMusicInExplorer
-HidePicturesFromThisPC          # ShowPicturesInThisPC
+ShowPicturesFromThisPC          # ShowPicturesInThisPC
 # HidePicturesFromExplorer      # ShowPicturesInExplorer
-HideVideosFromThisPC            # ShowVideosInThisPC
+ShowVideosFromThisPC            # ShowVideosInThisPC
 # HideVideosFromExplorer        # ShowVideosInExplorer
 Hide3DObjectsFromThisPC         # Show3DObjectsInThisPC
 # Hide3DObjectsFromExplorer     # Show3DObjectsInExplorer
