@@ -8,6 +8,19 @@
 ### Require administrator privileges ###
 RequireAdmin
 
+### Installs ###
+Install-GoogleChrome
+Install-Discord
+Install-Origin
+Install-WeMod
+Install-Slack
+Install-Steam
+Install-WinDirStat
+Install-XMeters
+Install-1Password7
+Install-Dropbox
+Install-UPlay
+
 ### Privacy Tweaks ###
 DisableTelemetry                # EnableTelemetry
 DisableCortana                  # EnableCortana
