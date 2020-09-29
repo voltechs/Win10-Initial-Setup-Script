@@ -125,7 +125,7 @@ DisableAutorun                  # EnableAutorun
 # DisableRecycleBin             # EnableRecycleBin
 EnableNTFSLongPaths             # DisableNTFSLongPaths
 # DisableNTFSLastAccess         # EnableNTFSLastAccess
-# SetBIOSTimeUTC                # SetBIOSTimeLocal
+SetBIOSTimeUTC                  # SetBIOSTimeLocal
 # EnableHibernation             # DisableHibernation
 # DisableSleepButton            # EnableSleepButton
 # DisableSleepTimeout           # EnableSleepTimeout
