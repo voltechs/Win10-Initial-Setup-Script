@@ -112,3 +112,33 @@ Function Install-Dropbox {
 Function Install-UPlay {
     InstallEXEUrl 'https://ubistatic3-a.akamaihd.net/orbit/launcher_installer/UplayInstaller.exe' 'UPlay' '/silent /install'
 }
+
+# Install Genie Timeline
+# Note: Installs the latest Genie Timeline Client
+Function Install-GenieTimeline {
+    InstallEXEUrl 'http://downloads.genie9.com/gtl/GenieTimeline10Pro.exe' 'GenieTimeline' '/silent /install'
+}
+
+# Install Battle.net
+# Note: Installs the latest Battle.net Client
+Function Install-BattleNet {
+    InstallEXEUrl 'https://www.battle.net/download/getInstallerForGame?os=win&gameProgram=BATTLENET_APP' 'BattleNet' '/silent /install'
+}
+
+# Install StartIsBack
+# Note: Installs the latest StartIsBack Client
+Function Install-StartIsBack {
+    InstallEXEUrl 'https://s3.amazonaws.com/startisback/StartIsBackPlusPlus_setup.exe' 'StartIsBack' '/silent /install'
+}
+
+# Install Nextcloud
+# Note: Installs the latest Nextcloud Client
+Function Install-Nextcloud {
+    InstallEXEUrl 'https://download.nextcloud.com/desktop/releases/Windows/latest' 'Nextcloud' '/silent /install'
+}
+
+# Install PowerToys
+# Note: Installs the latest PowerToys Client
+Function Install-PowerToys {
+    InstallEXEUrl 'https://github.com/microsoft/PowerToys/releases/download/v0.21.1/PowerToysSetup-0.21.1-x64.msi' 'PowerToys' '/silent /install'
+}

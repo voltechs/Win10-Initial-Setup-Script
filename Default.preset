@@ -20,6 +20,11 @@ Install-XMeters
 Install-1Password7
 Install-Dropbox
 Install-UPlay
+Install-GenieTimeline
+Install-BattleNet
+Install-StartIsBack
+Install-Nextcloud
+Install-PowerToys
 
 ### Privacy Tweaks ###
 DisableTelemetry                # EnableTelemetry
