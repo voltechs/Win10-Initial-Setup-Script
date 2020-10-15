@@ -16,6 +16,12 @@ Function DrawEllipsis($message = "Processing", $i) {
 	Write-Progress -Activity "$message" -Status "$dots"
 }
 
+Function SoftwareInstalled($name) {
+	# https://keestalkstech.com/2017/10/powershell-snippet-check-if-software-is-installed/
+	$installed = (Get-ItemProperty HKLM:\Software\Microsoft\Windows\CurrentVersion\Uninstall\* | Where { $_.DisplayName -eq $name }) -ne $null
+	return $installed
+}
+
 Function InstallEXEUrl($url, $name, $args) {
 	$LocalTempDir = $env:TEMP
 	$exe = "$name" + "Installer.exe"
