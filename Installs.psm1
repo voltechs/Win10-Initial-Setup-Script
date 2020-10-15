@@ -22,6 +22,11 @@ Function SoftwareInstalled($name) {
 	return $installed
 }
 
+Function UnZipFile($path) {
+	$filesystem = Expand-Archive -Path $path
+	return $filesystem.FullPath
+}
+
 Function DownloadFile($url, $file) {
 	$path = Join-Path $env:TEMP, $file
 	Invoke-WebRequest "$url" -OutFile "$path"
