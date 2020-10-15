@@ -22,6 +22,12 @@ Function SoftwareInstalled($name) {
 	return $installed
 }
 
+Function DownloadFile($url, $file) {
+	$path = Join-Path $env:TEMP, $file
+	Invoke-WebRequest "$url" -OutFile "$path"
+	return $path
+}
+
 Function InstallEXEUrl($url, $name, $args, $force = $false) {
 	if (SoftwareInstalled $name -or -Not $force) {
 		return
