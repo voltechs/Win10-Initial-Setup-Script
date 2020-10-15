@@ -6,6 +6,19 @@
 ##########
 
 ##########
+#region Settings
+##########
+
+Function SetComputerName($name) {
+	Rename-Computer -NewName $name
+}
+
+Function PromptAndSetComputerName {
+	$name = Read-Host 'What is this computer named?'
+	SetComputerName $name
+}
+
+##########
 #region Privacy Tweaks
 ##########
 

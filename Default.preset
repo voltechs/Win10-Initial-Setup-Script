@@ -26,6 +26,9 @@ Install-StartIsBack
 Install-Nextcloud
 Install-PowerToys
 
+### Settings ###
+PromptAndSetComputerName
+
 ### Privacy Tweaks ###
 DisableTelemetry                # EnableTelemetry
 DisableCortana                  # EnableCortana
