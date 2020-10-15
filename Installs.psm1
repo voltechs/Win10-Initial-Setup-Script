@@ -30,7 +30,7 @@ Function InstallEXEUrl($url, $name, $args, $force = $false) {
 	$LocalTempDir = $env:TEMP
 	$exe = "$name" + "Installer.exe"
 	$file = "$LocalTempDir\$exe"
-	(new-object System.Net.WebClient).DownloadFile($url, "$file")
+	Invoke-WebRequest $url -OutFile "$file"
 	#& "$file" /install;
 	$i = 0
 
