@@ -31,9 +31,17 @@ Function InstallEXEUrl($url, $name, $args, $force = $false) {
 	$exe = "$name" + "Installer.exe"
 	$file = "$LocalTempDir\$exe"
 	Invoke-WebRequest $url -OutFile "$file"
-	#& "$file" /install;
-	$i = 0
+	# (new-object System.Net.WebClient).DownloadFile($url, "$file")
+	InstallEXEFile $file, $name, $args, $force
+}
 
+Function InstallEXEFile($file, $name, $args, $force = $false) {
+	if (SoftwareInstalled $name -or -Not $force) {
+		return
+	}
+
+	$i = 0
+	#& "$file" /install;
 	$process = New-Object System.Diagnostics.Process
 	$process.StartInfo.FileName = "$file"
 	$process.StartInfo.Arguments = $args
