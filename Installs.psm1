@@ -108,6 +108,12 @@ Function Install-SidebarDiagnostics {
 	InstallEXEUrl 'https://github.com/ArcadeRenegade/SidebarDiagnostics/releases/download/3.5.6/Setup.exe' 'SidebarDiagnostics' '/silent /install'
 }
 
+# Install 7Zip
+# Note: Installs the latest 7Zip Client
+Function Install-7Zip {
+	InstallEXEUrl 'https://www.7-zip.org/a/7z1900-x64.msi' '7zip' '/qb'
+}
+
 # Install XMeters
 # Note: Installs the latest XMeters Client
 Function Install-XMeters {
