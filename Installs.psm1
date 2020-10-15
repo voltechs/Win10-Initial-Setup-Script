@@ -174,3 +174,16 @@ Function Install-Nextcloud {
 Function Install-PowerToys {
 	InstallEXEUrl 'https://github.com/microsoft/PowerToys/releases/download/v0.21.1/PowerToysSetup-0.21.1-x64.msi' 'PowerToys' '/silent /install'
 }
+
+# Install BCM94360CD
+# Note: Installs the latest BCM94360CD Driver (from Apple/macOS)
+Function Install-BCM94360CD {
+	# Scrape https://support.apple.com/downloads/Bootcamp%2520Support
+	# Find first link in grid (https://support.apple.com/kb/DL1837?viewlocale=en_US&locale=en_US)
+	# Find URL for Download button (https://download.info.apple.com/Mac_OS_X/031-30890-20150812-ea191174-4130-11e5-a125-930911ba098f/bootcamp5.1.5769.zip)
+
+	$file = DownloadFile 'https://download.info.apple.com/Mac_OS_X/031-30890-20150812-ea191174-4130-11e5-a125-930911ba098f/bootcamp5.1.5769.zip'
+	$directory = UnZipFile $file
+	$path = Join-Path "$directory" '$WinPEDriver$/AppleBluetoothBroadcom64/DPInst.exe'
+	InstallEXEFile $path 'Broadcom Bluetooth Drivers (BCM94360CD)'
+}
