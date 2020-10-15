@@ -22,7 +22,11 @@ Function SoftwareInstalled($name) {
 	return $installed
 }
 
-Function InstallEXEUrl($url, $name, $args) {
+Function InstallEXEUrl($url, $name, $args, $force = $false) {
+	if (SoftwareInstalled $name -or -Not $force) {
+		return
+	}
+
 	$LocalTempDir = $env:TEMP
 	$exe = "$name" + "Installer.exe"
 	(new-object System.Net.WebClient).DownloadFile($url, "$LocalTempDir\$exe")
