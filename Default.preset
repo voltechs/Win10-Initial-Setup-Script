@@ -9,12 +9,14 @@
 RequireAdmin
 
 ### Installs ###
+Install-7Zip
 Install-GoogleChrome
 Install-Discord
 Install-Origin
 Install-WeMod
 Install-Slack
 Install-Steam
+Install-BCM94360CD
 Install-WinDirStat
 Install-Dropbox
 Install-XMeters
