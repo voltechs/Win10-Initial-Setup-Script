@@ -29,12 +29,13 @@ Function InstallEXEUrl($url, $name, $args, $force = $false) {
 
 	$LocalTempDir = $env:TEMP
 	$exe = "$name" + "Installer.exe"
-	(new-object System.Net.WebClient).DownloadFile($url, "$LocalTempDir\$exe")
-	#& "$LocalTempDir\$exe" /install;
+	$file = "$LocalTempDir\$exe"
+	(new-object System.Net.WebClient).DownloadFile($url, "$file")
+	#& "$file" /install;
 	$i = 0
 
 	$process = New-Object System.Diagnostics.Process
-	$process.StartInfo.FileName = "$LocalTempDir\$exe"
+	$process.StartInfo.FileName = "$file"
 	$process.StartInfo.Arguments = $args
 	$process.StartInfo.UseShellExecute = $false
 	$process.StartInfo.RedirectStandardOutput = $true
@@ -45,7 +46,7 @@ Function InstallEXEUrl($url, $name, $args, $force = $false) {
 			Start-Sleep -Milliseconds 500
 		}
 		$process.WaitForExit()
-		rm "$LocalTempDir\$exe" -ErrorAction SilentlyContinue
+		rm "$file" -ErrorAction SilentlyContinue
 	}
 }
 
