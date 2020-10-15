@@ -33,9 +33,8 @@ Function InstallEXEUrl($url, $name, $args, $force = $false) {
 		return
 	}
 
-	$file = $env:TEMP + "\" + "$name" + "Installer.exe"
-	Invoke-WebRequest $url -OutFile "$file"
-	InstallEXEFile $file, $name, $args, $force
+	$path = DownloadFile $url, "$name" + "Installer.exe"
+	InstallEXEFile $path, $name, $args, $force
 }
 
 Function InstallEXEFile($file, $name, $args, $force = $false) {
