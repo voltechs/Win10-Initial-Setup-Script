@@ -27,11 +27,8 @@ Function InstallEXEUrl($url, $name, $args, $force = $false) {
 		return
 	}
 
-	$LocalTempDir = $env:TEMP
-	$exe = "$name" + "Installer.exe"
-	$file = "$LocalTempDir\$exe"
+	$file = $env:TEMP + "\" + "$name" + "Installer.exe"
 	Invoke-WebRequest $url -OutFile "$file"
-	# (new-object System.Net.WebClient).DownloadFile($url, "$file")
 	InstallEXEFile $file, $name, $args, $force
 }
 
