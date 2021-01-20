@@ -8,25 +8,32 @@
 ### Require administrator privileges ###
 RequireAdmin
 
-### Installs ###
-Install-7Zip
-Install-GoogleChrome
-Install-Discord
-Install-Origin
-Install-WeMod
-Install-Slack
-Install-Steam
-Install-BCM94360CD
-Install-WinDirStat
-Install-Dropbox
-Install-XMeters
-Install-1Password7
-Install-UPlay
-Install-GenieTimeline
 Install-BattleNet
-Install-StartIsBack
-Install-Nextcloud
-Install-PowerToys
+Install-BCM94360CD
+Install-GenieTimeline
+Install-XMeters
+
+### Installs ###
+Install-Chocolatey
+
+Choco-Install 7zip
+Choco-Install googlechrome
+Choco-Install discord
+Choco-Install origin
+Choco-Install wemod
+Choco-Install slack
+Choco-Install steam
+Choco-Install windirstat
+Choco-Install dropbox
+Choco-Install 1password
+Choco-Install uplay
+Choco-Install startisback
+Choco-Install nextcloud-client
+Choco-Install powertoys
+
+$User = Read-Host -Prompt 'Input the user name'
+
+exit
 
 ### Settings ###
 PromptAndSetComputerName
